@@ -7,9 +7,11 @@ use App\Controller\AppController;
 Class ArticlesController extends AppController {
 
     public function index()  {
-        //die('hey');
+        die('hey');
         $this->loadComponent('Paginator');
+        die('hey');
         $articles=$this->Paginator->paginate($this->Articles->find());
+       // die('hey');
         $this->set('articles', $articles);
     }
 
